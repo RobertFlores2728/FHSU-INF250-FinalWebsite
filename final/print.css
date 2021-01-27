@@ -1,0 +1,19 @@
+/*simplifies the header*/
+header { 
+    color: #000000;
+    font-size: 20pt;
+}
+/*sets font to semthing appropriate for paper*/
+main {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+}
+/*removes nav from display*/
+nav {
+    display: none;
+}
+
+/*removes pics from display*/
+figure{
+    display: none;
+}

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <!--Configures the head of the web page-->
+        <meta charset="utf-8"> <!--sets the charset to urf-8-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--helps pages look better at different sizes-->
+        <link rel="stylesheet" href="final.css" media="screen"><!--links the page to the primary screen cascading style sheet-->
+        <link rel="stylesheet" href="print.css" media="print"><!--links the page to the print cascading style sheet-->
+        
+        <!--Embedded Style sheet configurations-->
+        <style>
+            /*configures the form used for the user survey*/
+            form {
+                background-color: #EAEAEA;
+                font-family: Arial, sans-serif;
+                width: 350px; padding: 3%;
+                margin: auto; /*centers the form*/
+                margin-top: 3%;
+            }
+            
+            /*configures the labels used in the form*/
+            label { 
+                font-size: 1.0em;
+                width: auto;
+                max-width: 100%;
+            }
+            /*configures the input used in the form*/
+            input{
+                width: auto;
+                max-width: 75%;
+            }
+            /*configures the inputs of type checkbox used in the form*/
+            input[type="checkbox"]{
+                margin-top: 10px;
+            }
+            /*configures a redfont class which is used to color all labels AND paragraphs found in the form. this way they all look the same.*/
+            .redfont{
+                color: darkred;
+                font-size: 1.0em;
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+            }
+            /*configures a two column grid used in the form. used with the radio buttons and their labels.*/
+            .formtwocolumn{
+                display: grid;
+                grid-template-columns: 150px 200px;
+                grid-template-rows: auto;
+                grid-gap: 1em;
+                gap: 1em;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            /*configures the labels to the left column*/
+            .formtwocolumn label{
+                grid-column: 1/2;
+                grid-row: auto;
+                text-align: left;
+            }
+            /*configures the input, in this case our radio buttons, to the right column*/
+            .formtwocolumn input{
+                grid-column: 2/3;
+                grid-row: auto;
+            }
+        </style>
+        
+        <!--Sets the title of the web page, displayed in the web broswer-->
+        <title>2019 Season - A Glimpse into Formula One</title>
+    </head>
+    
+    <!--Configures the body of the web page-->
+    <body>
+    <div id="wrapper"><!--used to seperate the content from the entire body. it is then given a margin and a different color-->
+        <!--configures the big header of the page-->
+        <header>
+            <h1><a href="final.html">A Glimpse into Formula One</a></h1>
+        </header>
+        
+        <!--Configures the nav section of the page-->
+        <nav>
+            <ul>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="2019season.html">2019 Season</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+        
+        <!--Configures the main section of the page-->
+        <main>
+            <!--INTRO-->
+            <h2>The 2019 Season</h2>
+            <p>This page aims to update the newcomer on the current Formula 1 season by introducing the <a href="#teams">teams</a> and their 
+                <a href="#standings">standings</a> as well as the <a href="#races">races</a> of the 2019 season, which at the time of writing was 
+                halfway finished. There is also a <a href="#survey">survey</a> at the end.
+            </p>
+            
+            
+            <!--TEAMS-->
+            
+            <h2 id="teams">Teams</h2>
+            <p>There are ten teams in the 2019 Formula 1 Season. Each team has two drivers aswell as reserve/test drivers.
+            </p>
+            
+            <h3>Mercedes AMG Petronas F1 Team</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in Germany</li>
+                    <li>Driver 1: Lewis Hamilton - United Kingdom</li>
+                    <li>Driver 2: Valtteri Bottas - Finland</li>
+                    <li>Website: <a href="https://www.mercedesamgf1.com/en/mercedes-amg-f1/">mercedesamgf1.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/mercedes.jpg" alt="f1 mercedes">
+                    <figcaption>Mercedes AMG Petronas F1 Team. source:
+                        <a href="https://www.mercedesamgf1.com/marsF1/en/instance/ko/British-Grand-Prix.xhtml?oid=176001638">mercedesamgf1.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Scuderia Ferrari</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in Italy</li>
+                    <li>Driver 1: Sebastian Vettel - Germany</li>
+                    <li>Driver 2: Charles Leclerc - Monaco</li>
+                    <li>Website: <a href="https://formula1.ferrari.com/en/">formula1.ferrari.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/ferrari.jpg" alt="f1 ferrari">
+                    <figcaption>Scuederia Ferrari. source:
+                        <a href="https://formula1.ferrari.com/en/2019-f1-british-gp-saturday-photogallery/">formula1.ferrari.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Red Bull Racing</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in Austria</li>
+                    <li>Driver 1: Max Verstappen - The Netherlands</li>
+                    <li>Driver 2: Pierre Gasly - France</li>
+                    <li>Website: <a href="https://redbullracing.redbull.com/">redbullracing.redbull.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/redbull.jpg" alt="f1 redbull">
+                    <figcaption>Red Bull Racing. source:
+                        <a href="https://www.grandprix247.com/2019/03/12/2019-f1-guide-will-the-red-bull-honda-gamble-payout/">grandprix247.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>McLaren F1 Team</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in the United Kingdom</li>
+                    <li>Driver 1: Carlos Sainz Jr. - Spain</li>
+                    <li>Driver 2: Lando Norris - United Kingdom</li>
+                    <li>Website: <a href="https://www.mclaren.com/racing/">mclaren.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/mclaren.jpg" alt="f1 mclaren">
+                    <figcaption>Mclaren F1 Team. source:
+                        <a href="https://www.motorsportweek.com/news/id/23192">motorsportweek.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Renault F1 Team</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in France</li>
+                    <li>Driver 1: Nico Hulkenberg - Germany</li>
+                    <li>Driver 2: Daniel Ricciardo - Australia</li>
+                    <li>Website: <a href="https://www.renaultsport.com/-Formule-1-330-.html">renaultsport.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/renault.jpg" alt="f1 renault">
+                    <figcaption>Renault F1 Team. source:
+                        <a href="https://www.renaultsport.com/2019-formula-1-rolex-british-grand-prix-friday.html?r=331">renaultsport.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Alfa Romeo Racing</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in Switzerland</li>
+                    <li>Driver 1: Kimi Raikkonen - Finland</li>
+                    <li>Driver 2: Antonio Giovinazzi - Australia</li>
+                    <li>Website: <a href="https://www.sauber-group.com/motorsport/formula-1/">sauber-group.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/alfa_romeo.jpg" alt="f1 alfa romeo">
+                    <figcaption>Alfa Romeo Racing. source:
+                        <a href="https://www.sauber-group.com/motorsport/formula-1/gallery/bahrain-t03/">sauber-group.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Racing Point F1 Team</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in the United Kingdom</li>
+                    <li>Driver 1: Sergio Perez - Mexico</li>
+                    <li>Driver 2: Lance Stroll - Canada</li>
+                    <li>Website: <a href="https://www.racingpoint.com/">racingpoint.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/racingpoint.jpg" alt="f1 racingpoint">
+                    <figcaption>Racing Point. source:
+                        <a href="https://www.racingpoint.com/galleries/bahrain-grand-prix-2019-saturday">racingpoint.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Toro Rosso</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in Italy</li>
+                    <li>Driver 1: Daniil Kvyat - Russia</li>
+                    <li>Driver 2: Alexander Albon - Thailand</li>
+                    <li>Website: <a href="https://scuderiatororosso.redbull.com/en/">scuderiatororosso.redbull.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/toro_rosso.jpg" alt="f1 toro rosso">
+                    <figcaption>Toro Rosso. source:
+                        <a href="https://scuderiatororosso.redbull.com/en/review-british-gp-2019/">scuderiatororosso.redbull.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Haas F1 Team</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in the USA</li>
+                    <li>Driver 1: Kevin Magnussen - Denmark</li>
+                    <li>Driver 2: Romain Grosjean - France</li>
+                    <li>Website: <a href="https://www.haasf1team.com/">haasf1team.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/haas.jpg" alt="f1 haas">
+                    <figcaption>Haas F1 Team. source:
+                        <a href="https://flipboard.com/topic/australiangrandprix">flipboard.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <h3>Williams Racing</h3>
+            <div class="twocolumn">
+                <ul>
+                    <li>Based in the United Kingdom</li>
+                    <li>Driver 1: George Russell - United Kingdom</li>
+                    <li>Driver 2: Robert Kubica - Poland</li>
+                    <li>Website: <a href="https://www.williamsf1.com/">williamsf1.com</a></li>
+                </ul>
+                <figure >
+                    <img src="images/2019season/williams.jpg" alt="f1 williams">
+                    <figcaption>Williams racing. source:
+                        <a href="https://www.beinsports.com/en/f1/news/f1-2019-pre-season-report-williams-1/1131578">beinsports.com</a>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            
+            <!--DRIVER STANDINGS-->
+            
+            <h2 id="standings">Current Standings</h2>
+            <div class="twocolumn">
+            <table border="1">
+                <caption>Drivers' Championship Standings</caption>
+                <thead>
+                    <tr>
+                        <th id="place">Place</th>
+                        <th id="driver">Driver</th>
+                        <th id="points">Points</th>
+                        <th id="wins">Wins</th>
+                        <th id="podiums">Podiums</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="place">1</td>
+                        <td headers="driver">Lewis Hamilton</td>
+                        <td headers="points">223</td>
+                        <td headers="wins">7</td>
+                        <td headers="podiums">9</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">2</td>
+                        <td headers="driver">Valtteri Bottas</td>
+                        <td headers="points">184</td>
+                        <td headers="wins">2</td>
+                        <td headers="podiums">9</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">3</td>
+                        <td headers="driver">Max Verstappen</td>
+                        <td headers="points">136</td>
+                        <td headers="wins">1</td>
+                        <td headers="podiums">3</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">4</td>
+                        <td headers="driver">Sebastian Vettel</td>
+                        <td headers="points">123</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">4</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">5</td>
+                        <td headers="driver">Charles Leclerc</td>
+                        <td headers="points">120</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">5</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">6</td>
+                        <td headers="driver">Pierre Gasly</td>
+                        <td headers="points">55</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">7</td>
+                        <td headers="driver">Carlos Sainz</td>
+                        <td headers="points">38</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">8</td>
+                        <td headers="driver">Kimi Raikkonen</td>
+                        <td headers="points">25</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">9</td>
+                        <td headers="driver">Lando Norris</td>
+                        <td headers="points">22</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">10</td>
+                        <td headers="driver">Daniel Ricciardo</td>
+                        <td headers="points">22</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">11</td>
+                        <td headers="driver">Nico Hulkenberg</td>
+                        <td headers="points">17</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">12</td>
+                        <td headers="driver">Kevin Magnussen</td>
+                        <td headers="points">14</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">13</td>
+                        <td headers="driver">Sergio Perez</td>
+                        <td headers="points">13</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">14</td>
+                        <td headers="driver">Daniil Kvyat</td>
+                        <td headers="points">12</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">15</td>
+                        <td headers="driver">Alexander Albon</td>
+                        <td headers="points">7</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">16</td>
+                        <td headers="driver">Lance Stroll</td>
+                        <td headers="points">6</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">17</td>
+                        <td headers="driver">Romain Grosjean</td>
+                        <td headers="points">2</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">18</td>
+                        <td headers="driver">Antonio Giovinazzi</td>
+                        <td headers="points">1</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">19</td>
+                        <td headers="driver">George Russel</td>
+                        <td headers="points">0</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">20</td>
+                        <td headers="driver">Robert Kubica</td>
+                        <td headers="points">0</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                </tbody>
+            </table>
+                
+            
+            <!--TEAM STANDINGS-->
+            
+            <table border="1">
+                <caption>Constructors' Championship Standings</caption>
+                <thead>
+                    <tr>
+                        <th id="place">Place</th>
+                        <th id="team">Team</th>
+                        <th id="points">Points</th>
+                        <th id="wins">Wins</th>
+                        <th id="podiums">Podiums</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td headers="place">1</td>
+                        <td headers="team">Mercedes</td>
+                        <td headers="points">407</td>
+                        <td headers="wins">9</td>
+                        <td headers="podiums">18</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">2</td>
+                        <td headers="team">Ferrari</td>
+                        <td headers="points">243</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">9</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">3</td>
+                        <td headers="team">Redbull</td>
+                        <td headers="points">191</td>
+                        <td headers="wins">1</td>
+                        <td headers="podiums">3</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">4</td>
+                        <td headers="team">Mclaren</td>
+                        <td headers="points">60</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">5</td>
+                        <td headers="team">Renault</td>
+                        <td headers="points">39</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">6</td>
+                        <td headers="team">Alfa Romeo</td>
+                        <td headers="points">26</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">7</td>
+                        <td headers="team">Racing Point</td>
+                        <td headers="points">19</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">8</td>
+                        <td headers="team">Toro Rosso</td>
+                        <td headers="points">19</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">9</td>
+                        <td headers="team">Haas</td>
+                        <td headers="points">16</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="place">10</td>
+                        <td headers="team">Williams</td>
+                        <td headers="points">0</td>
+                        <td headers="wins">0</td>
+                        <td headers="podiums">0</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            
+            
+            <!--RACES-->
+            
+            <h2 id="races">Races</h2>
+            <p>Some of the more iconic races include:</p>
+        
+            <figure >
+                <img src="images/2019season/monaco.jpg" alt="f1 monaco gp">
+                <figcaption>Monaco Grand Prix. source:
+                    <a href="https://www.racingpoint.com/galleries/bahrain-grand-prix-2019-saturday">racingpoint.com</a>
+                </figcaption>
+            </figure>
+            
+            <figure >
+                <img src="images/2019season/spa_francorchamps.jpg" alt="f1 belgian gp">
+                <figcaption>Belgian Grand Prix at Spa-Francorchamps. source:
+                    <a href="https://www.racingpoint.com/galleries/bahrain-grand-prix-2019-saturday">racingpoint.com</a>
+                </figcaption>
+            </figure>
+            
+            
+            <figure >
+                <img src="images/2019season/silverstone.jpg" alt="f1 british gp">
+                <figcaption>British Grand Prix at Silverstone. source:
+                    <a href="https://www.theweek.co.uk/formula-1/100645/f1-british-grand-prix-silverstone-contract-liberty-media-brdc">theweek.co.uk</a>
+                </figcaption>
+            </figure>
+            
+            
+            <h3>2019 FIA Formula One World Championship Race Calendar</h3>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th id="round">Round</th>
+                        <th id="race">Race</th>
+                        <th id="dates">Dates</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="round">1</td>
+                        <td headers="race">Australian Grand Prix</td>
+                        <td headers="dates">Mar 15-17</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">2</td>
+                        <td headers="race">Bahrain Grand Prix</td>
+                        <td headers="dates">Mar 29-31</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">3</td>
+                        <td headers="race">Chinese Grand Prix</td>
+                        <td headers="dates">Apr 12-14</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">4</td>
+                        <td headers="race">Azerbaijan Grand Prix</td>
+                        <td headers="dates">Apr 26-28</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">5</td>
+                        <td headers="race">Spanish Grand Prix</td>
+                        <td headers="dates">May 10-12</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">6</td>
+                        <td headers="race">Monaco Grand Prix</td>
+                        <td headers="dates">May 23-26</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">7</td>
+                        <td headers="race">Canadian Grand Prix</td>
+                        <td headers="dates">Jun 07-09</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">8</td>
+                        <td headers="race">French Grand Prix</td>
+                        <td headers="dates">Jun 21-23</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">9</td>
+                        <td headers="race">Austrian Grand Prix</td>
+                        <td headers="dates">Jun 28-30</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">10</td>
+                        <td headers="race">British Grand Prix</td>
+                        <td headers="dates">Jul 12-14</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">11</td>
+                        <td headers="race">Germany Grand Prix</td>
+                        <td headers="dates">Jul 26-28</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">12</td>
+                        <td headers="race">Hungarian Grand Prix</td>
+                        <td headers="dates">Aug 02-04</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">13</td>
+                        <td headers="race">Belgian Grand Prix</td>
+                        <td headers="dates">Aug 30 - Sep 01</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">14</td>
+                        <td headers="race">Italian Grand Prix</td>
+                        <td headers="dates">Sep 06 - 08</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">15</td>
+                        <td headers="race">Singapore Grand Prix</td>
+                        <td headers="dates">Sep 20 - 22</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">16</td>
+                        <td headers="race">Russian Grand Prix</td>
+                        <td headers="dates">Sep 27 - 29</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">17</td>
+                        <td headers="race">Japanese Grand Prix</td>
+                        <td headers="dates">Oct 11 - 13</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">18</td>
+                        <td headers="race">Mexican Grand Prix</td>
+                        <td headers="dates">Oct 25 - 27</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">19</td>
+                        <td headers="race">United States Grand Prix</td>
+                        <td headers="dates">Nov 01 - 03</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">20</td>
+                        <td headers="race">Brazilian Grand Prix</td>
+                        <td headers="dates">Nov 15 - 17</td>
+                    </tr>
+                    
+                    <tr>
+                        <td headers="round">21</td>
+                        <td headers="race">Abu Dhabi Grand Prix</td>
+                        <td headers="dates">Nov 29 - Dec 01</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            <!--USER SURVEY-->
+            
+            <h3 id="survey">Visitor Survey</h3>
+            <form>
+                
+                <p class="redfont">Personal Information</p>
+                
+                <div class="formtwocolumn">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="name" required="required">
+                
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="email" required="required">
+                </div>
+                
+                
+                <br>
+                <p class="redfont">Which team will you be rooting for this season?</p>
+                
+                <div class="formtwocolumn">
+                
+                <label for="teamMER">Mercedes</label>
+                <input type="radio" name="team" id="teamMER">
+                
+                <label for="teamFER">Ferrari</label>
+                <input  type="radio" name="team" id="teamFER">
+                
+                <label for="teamRDB">Red Bull</label>
+                <input  type="radio" name="team" id="teamRDB">
+                
+                <label for="teamMCL">McLaren</label>
+                <input  type="radio" name="team" id="teamMCL">
+                
+                <label for="teamREN">Renault</label>
+                <input  type="radio" name="team" id="teamREN">
+                
+                <label for="teamALF">Alfa Romeo</label>
+                <input  type="radio" name="team" id="teamALF">
+                
+                <label for="teamRPO">Racing Point</label>
+                <input  type="radio" name="team" id="teamRPO">
+                
+                <label for="teamTRO">Toro Rosso</label>
+                <input  type="radio" name="team" id="teamTRO">
+                
+                <label for="teamHAA">Haas</label>
+                <input  type="radio" name="team" id="teamHAA">
+                
+                <label for="teamWIL">Williams</label>
+                <input  type="radio" name="team" id="teamWIL">
+                </div>
+                <br>
+                
+                
+                <p class="redfont">Which events would you like to attend?(if any):</p>
+                <input type="checkbox" name="AUS" id="AUS" value="yes">
+                <label for="AUS">Australian Grand Prix</label><br>
+                
+                <input type="checkbox" name="BHR" id="BHR" value="yes">
+                <label for="BHR">Bahrain Grand Prix</label><br>
+                
+                <input type="checkbox" name="CHN" id="CHN" value="yes">
+                <label for="CHN">Chinese Grand Prix</label><br>
+                
+                <input type="checkbox" name="AZE" id="AZE" value="yes">
+                <label for="AZE">Azerbaijani Grand Prix</label><br>
+                
+                <input type="checkbox" name="ESP" id="ESP" value="yes">
+                <label for="ESP">Spanish Grand Prix</label><br>
+                
+                <input type="checkbox" name="MCO" id="MCO" value="yes">
+                <label for="MCO">Monaco Grand Prix</label><br>
+                
+                <input type="checkbox" name="CAN" id="CAN" value="yes">
+                <label for="CAN">Canadian Grand Prix</label><br>
+                
+                <input type="checkbox" name="FRA" id="FRA" value="yes">
+                <label for="FRA">French Grand Prix</label><br>
+                
+                <input type="checkbox" name="AUT" id="AUT" value="yes">
+                <label for="AUT">Austrian Grand Prix</label><br>
+                
+                <input type="checkbox" name="GBR" id="GBR" value="yes">
+                <label for="GBR">British Grand Prix</label><br>
+                
+                <input type="checkbox" name="DEU" id="DEU" value="yes">
+                <label for="DEU">German Grand Prix</label><br>
+                
+                <input type="checkbox" name="HUN" id="HUN" value="yes">
+                <label for="HUN">Hungarian Grand Prix</label><br>
+            
+                <input type="checkbox" name="BEL" id="BEL" value="yes">
+                <label for="BEL">Belgian Grand Prix</label><br>
+                
+                <input type="checkbox" name="ITA" id="ITA" value="yes">
+                <label for="ITA">Italian Grand Prix</label><br>
+                
+                <input type="checkbox" name="SGP" id="SGP" value="yes">
+                <label for="SGP">Singapore Grand Prix</label><br>
+                
+                <input type="checkbox" name="RUS" id="RUS" value="yes">
+                <label for="RUS">Russian Grand Prix</label><br>
+                
+                <input type="checkbox" name="JPN" id="JPN" value="yes">
+                <label for="JPN">Japanese Grand Prix</label><br>
+                
+                <input type="checkbox" name="MEX" id="MEX" value="yes">
+                <label for="MEX">Mexican Grand Prix</label><br>
+                
+                <input type="checkbox" name="USA" id="USA" value="yes">
+                <label for="USA">United States Grand Prix</label><br>
+                
+                <input type="checkbox" name="BRA" id="BRA" value="yes">
+                <label for="BRA">Brazilian Grand Prix</label><br>
+                
+                <input type="checkbox" name="ARE" id="ARE" value="yes">
+                <label for="ARE">Abu Dhabi Grand Prix</label><br>
+                <br>
+                
+                
+                <label for="rating" class="redfont">Rate your understanding of F1:</label>
+                <br>Still confused. <input type="range" min="1" and max="10" name="rating" id="rating"> Got it!<br>
+                <br>
+                
+                
+                <label for="comments" class="redfont"> Questions, comments, concerns?</label><br>
+                <textarea name="comments" id="comments" maxlength="1000"
+                    rows="5" cols="40"
+                    required="required"
+                    placeholder="your comments here..."></textarea>
+                
+                
+                <input type="submit">
+                <input type="reset">
+              
+            </form>
+            
+            
+        </main>
+        
+        <!--sets the footer-->
+        <footer>
+            Email me at: <a href="mailto:h_flores@mail.fhsu.edu">h_flores@mail.fhsu.edu</a>
+        </footer>
+            
+        
+    </div>
+    </body>
+    
+</html>

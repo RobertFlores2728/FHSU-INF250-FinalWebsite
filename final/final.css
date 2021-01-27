@@ -1,0 +1,287 @@
+
+/*used to paint the background of the webpage*/
+body{
+    background-color: #511;
+    padding-top: 0;
+    font-family: sans-serif;
+}
+
+/*used to 'wrap' the content with white background over
+the dark red background of the webpage body.
+also constraints the margins on the sides and centers the content.*/
+#wrapper{
+    background-color: white;
+    color: black;
+    max-width:99%;
+    margin: auto;
+}
+
+
+
+/*configures the header section of the web page*/
+header{
+    text-align: center;
+    background-color: #b80000;
+    height: auto;
+    font-family: serif;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff0f0;
+}
+
+header a:hover{
+    color: #ffa0a0;
+}
+
+h1{
+    padding: 1%;
+    margin-bottom: 0;
+}
+
+
+
+/*configures the navigation section of the web page*/
+nav{
+    background-color: darkgoldenrod;
+    font-family: serif;
+}
+
+/*sets the unordered list in the nav structure element to be large, centered and without list markers*/
+nav ul{
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    
+}
+
+/*configures the individual list items of the navigation.*/
+nav li{
+    margin-right: 5%;
+    border-bottom: 1px solid #fa0;
+}
+
+/*configures the navigation text, which are links*/
+nav a{
+    text-decoration: none;
+    color: gold;
+}
+
+nav a:hover{
+    color: #444;
+}
+
+
+
+/*configures the main section of the web page*/
+main{
+	padding-right: 1%;
+    padding-left: 1%;
+}
+
+h2{
+    color: crimson;
+    font-size: 2.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 5%;
+    width: auto;
+    word-wrap: break-word; /*prevents the header from running off the page*/
+}
+
+h3{
+    color: darkred;
+    font-size: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    width: auto;
+    word-wrap: break-word; /*prevents the header from running off the page*/
+}
+
+p{
+    font-size: 1.1em;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+ul{
+    font-size: 1.1em;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+/*configures the data tables*/
+table{
+    margin: auto;
+    margin-top: 1%;
+    width: 80%;
+    border: solid darkred 3px;
+    background-color: indianred;
+}
+
+/*configures the data table title or caption*/
+table caption{
+    color: firebrick;
+    font-size: 1.25em;
+}
+
+/*removes borders from the table elements*/
+td, th { 
+    padding: 3px;
+    border: none;
+}
+
+/*sets the table header elements to a gold color*/
+th{
+    background-color: gold;
+}
+
+/*configures the table rows to alternate colors*/
+tr:nth-of-type(odd) {
+    background-color: white;
+}
+
+tr:nth-of-type(even) {
+    background-color: #eaeaea;
+}
+
+
+
+/*configures the footer section of the web page*/
+footer{
+    text-align: center;
+    margin-top: 4%;
+}
+
+
+
+/*holds image and figcaption*/
+figure{
+    max-width: 90%;
+    width: 100%; /*takes up as much of the screen as possible in lower resolutions.*/
+    height: auto;
+    margin: auto;
+    margin-bottom: 4%;
+    margin-left: 5%;
+}
+
+/*sets the figcaption width to the size of the figure*/
+figcaption{
+    width: auto;
+}
+
+/*allows the image to grow with the figure*/
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+/*displays external page, in this case our embedded youtube video*/
+iframe{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+/*when the viewport has reached atleast 600px in size*/
+@media (min-width: 600px ) {
+    header{
+		font-size: 1.5em;
+	}
+    nav li{
+        display: inline; /*changes the navigation to inline*/
+    }
+    h2{
+        margin-left: 5%;
+    }
+    h3{
+        margin-left: 5%;
+    }
+    /*prevents the figure, image, and caption from getting too large*/
+    figure{
+        max-width: 70%;
+    }
+    
+}
+
+/*when the viewport has reached atleast 800px in size*/
+@media (min-width: 800px){
+    /*resizes the table appropriately*/
+    table{
+        width: 50%;
+    }
+    /*prevents the figure, image, and caption from getting too large*/
+    figure{
+        max-width: 50%;
+    }
+    /*resizes the iframe appropriately*/
+    iframe{
+        width: 70%;
+        height: 400px;
+    }
+}
+
+/*when the viewport has reached atleast 1280px in size*/
+@media (min-width: 1280px){
+    p{
+        max-width: 80%; /*prevents paragraphs from going wall to wall on larger screens*/
+    }
+    /*resizes the iframe appropriately*/
+    iframe{
+        width: 60%;
+        height: 500px;
+    }
+    
+    /*configures a grid system with a double column setup on larger screens, where two elements whether paragraphs, figures, or tables are placed side 
+    by side*/
+    .twocolumn{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5%;
+        margin-top: 1.5%;
+    }
+    
+    /*configures paragraphs inside of the twocolumn grid*/
+    .twocolumn p{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /*configures figures inside of the twocolumn grid*/
+    .twocolumn figure{
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        width: 100%;
+        margin: auto; /*centers the images*/
+        max-width: 80%;
+        margin-left: 10%;
+    }
+    
+    /*configures tables inside of the twocolumn grid*/
+    .twocolumn table{
+        width: 70%;
+        margin: 0;
+        margin-left: 15%;
+    }
+}
+
+/*when the viewport has reached atleast 1550px in size*/
+@media (min-width: 1550px){
+    #wrapper{
+		max-width: 85%; /*creates larger margins on the sides, which looks better on bigger screens*/
+	}
+    
+    figure{
+        width: 50%;
+        margin: auto; /*centers the images*/
+        max-width: 50%;
+    }
+}
